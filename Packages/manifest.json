@@ -20,9 +20,17 @@
       "scopes": [
         "jp.supertask"
       ]
+    },
+    {
+      "name": "fuqunaga",
+      "url": "https://registry.npmjs.com",
+      "scopes": [
+        "ga.fuquna"
+      ]
     }
   ],
   "dependencies": {
+    "ga.fuquna.prefsgui.rosettaui": "0.0.10",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.15",
@@ -34,9 +42,14 @@
     "com.unity.timeline": "1.6.4",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.7.8",
+    "jp.keijiro.kino.aqua": "1.0.3",
+    "jp.keijiro.kino.post-processing": "2.1.15",
     "jp.keijiro.klak.motion": "1.0.1",
     "jp.keijiro.klak.spout": "2.0.3",
     "jp.keijiro.metamesh": "0.0.6",
+    "jp.keijiro.minis": "1.0.10",
+    "jp.keijiro.laspvfx": "1.0.2",
+    "jp.keijiro.vfx-extra": "1.0.0",
     "jp.supertask.shaderlibcore": "1.0.3",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",

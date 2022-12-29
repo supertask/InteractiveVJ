@@ -71,6 +71,15 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.inputsystem": {
+      "version": "1.4.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 1,
@@ -231,6 +240,40 @@
       },
       "url": "https://packages.unity.com"
     },
+    "ga.fuquna.prefsgui": {
+      "version": "3.2.4",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
+    },
+    "ga.fuquna.prefsgui.rosettaui": {
+      "version": "0.0.10",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "ga.fuquna.prefsgui": "3.2.4",
+        "ga.fuquna.rosettaui": "0.4.3",
+        "ga.fuquna.rosettaui.uitoolkit": "0.0.10"
+      },
+      "url": "https://registry.npmjs.com"
+    },
+    "ga.fuquna.rosettaui": {
+      "version": "0.4.3",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
+    },
+    "ga.fuquna.rosettaui.uitoolkit": {
+      "version": "0.0.10",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "ga.fuquna.rosettaui": "0.4.1"
+      },
+      "url": "https://registry.npmjs.com"
+    },
     "jp.keijiro.akvfx": {
       "version": "file:jp.keijiro.akvfx",
       "depth": 0,
@@ -241,6 +284,24 @@
         "com.unity.mathematics": "1.1.0",
         "com.unity.visualeffectgraph": "7.3.1"
       }
+    },
+    "jp.keijiro.kino.aqua": {
+      "version": "1.0.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.render-pipelines.high-definition": "7.4.1"
+      },
+      "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.kino.post-processing": {
+      "version": "2.1.15",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.render-pipelines.high-definition": "7.4.1"
+      },
+      "url": "https://registry.npmjs.com"
     },
     "jp.keijiro.klak.motion": {
       "version": "1.0.1",
@@ -260,6 +321,32 @@
       },
       "url": "https://registry.npmjs.com"
     },
+    "jp.keijiro.lasp": {
+      "version": "2.1.5",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.burst": "1.4.4",
+        "jp.keijiro.libsoundio": "1.0.3"
+      },
+      "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.laspvfx": {
+      "version": "1.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "jp.keijiro.lasp": "2.1.5"
+      },
+      "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.libsoundio": {
+      "version": "1.0.3",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
+    },
     "jp.keijiro.metamesh": {
       "version": "0.0.6",
       "depth": 0,
@@ -267,6 +354,30 @@
       "dependencies": {
         "com.unity.mathematics": "1.1.0"
       },
+      "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.minis": {
+      "version": "1.0.10",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "jp.keijiro.rtmidi": "1.0.4",
+        "com.unity.inputsystem": "1.0.1"
+      },
+      "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.rtmidi": {
+      "version": "1.0.4",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.vfx-extra": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://registry.npmjs.com"
     },
     "jp.supertask.shaderlibcore": {
