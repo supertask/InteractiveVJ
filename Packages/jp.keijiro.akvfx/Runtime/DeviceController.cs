@@ -23,6 +23,7 @@ public sealed class DeviceController : MonoBehaviour
 
     public RenderTexture ColorMap => _colorMap;
     public RenderTexture PositionMap => _positionMap;
+    public float MaxDepth = 2.0f;
 
     #endregion
 
@@ -119,7 +120,8 @@ public sealed class DeviceController : MonoBehaviour
         _driver.ReleaseLastFrame();
 
         // Invoke the unprojection compute shader.
-        _compute.SetFloat(ID.MaxDepth, _deviceSettings.maxDepth);
+        //_compute.SetFloat(ID.MaxDepth, _deviceSettings.maxDepth);
+        _compute.SetFloat(ID.MaxDepth, MaxDepth);
         _compute.SetBuffer(0, ID.ColorBuffer, _colorBuffer);
         _compute.SetBuffer(0, ID.DepthBuffer, _depthBuffer);
         _compute.SetBuffer(0, ID.XYTable, _xyTable);

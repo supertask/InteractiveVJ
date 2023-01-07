@@ -7,19 +7,19 @@ using UnityEngine;
 using UnityEngine.UIElements;
 // ReSharper disable ConditionIsAlwaysTrueOrFalse
 // ReSharper disable ConvertToConstant.Local
-using Klak.Spout;
+using Akvfx;
 
 namespace InteractiveVJ
 {
-    public class CameraSetting : MonoBehaviour, IElementCreator
+    public class KinectPrefsSetting : MonoBehaviour, IElementCreator
     {
-        [SerializeField] public SpoutSender spoutSender; 
+        [SerializeField] public DeviceController deviceController; 
 
-        private PrefsString cameraSpoutName = new("Camera Spout Name", "UnityInteractiveVJ");
+        public PrefsFloat kinectMaxDepth = new("Kinect Max Depth", 1.1f);
 
         void Start()
         {
-            spoutSender.spoutName = cameraSpoutName.Get();
+            deviceController.MaxDepth = kinectMaxDepth.Get();
         }
 
         void Update()
@@ -31,13 +31,14 @@ namespace InteractiveVJ
             return UI.Page(
 
                 UI.Row(
-                    cameraSpoutName.CreateElement().RegisterValueChangeCallback(() =>
+                    kinectMaxDepth.CreateSlider(0f, 6.6f).RegisterValueChangeCallback(() =>
                     {
-                        spoutSender.spoutName = cameraSpoutName.Get();
+                        deviceController.MaxDepth = kinectMaxDepth.Get();
                     })
                 )
             );
         }
+        /*
         private Element WindowedImage(string label, Func<Texture> getImage, float maxSideSize)
         {
             return UI.Row(
@@ -67,6 +68,7 @@ namespace InteractiveVJ
                     })
             );
         }
+        */
 
 
 

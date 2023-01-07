@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6725648291016350315
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12e84e1766b64919984e8b1ecd65226, type: 3}
+  m_Name: Aqua
+  m_EditorClassIdentifier: 
+  active: 0
+  opacity:
+    m_OverrideState: 1
+    m_Value: 0.226
+  edgeColor:
+    m_OverrideState: 0
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+  edgeContrast:
+    m_OverrideState: 0
+    m_Value: 1.2
+  fillColor:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  blurWidth:
+    m_OverrideState: 0
+    m_Value: 1
+  blurFrequency:
+    m_OverrideState: 0
+    m_Value: 0.5
+  hueShift:
+    m_OverrideState: 0
+    m_Value: 0.1
+  interval:
+    m_OverrideState: 0
+    m_Value: 1
+  iteration:
+    m_OverrideState: 0
+    m_Value: 20
+  overlayMode:
+    m_OverrideState: 0
+    m_Value: 0
+  overlayTexture:
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  overlayOpacity:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!114 &-6602320834738990707
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -292,6 +341,7 @@ MonoBehaviour:
   - {fileID: 5635170841439886292}
   - {fileID: -5620841549553096041}
   - {fileID: -6602320834738990707}
+  - {fileID: -6725648291016350315}
 --- !u!114 &5635170841439886292
 MonoBehaviour:
   m_ObjectHideFlags: 3

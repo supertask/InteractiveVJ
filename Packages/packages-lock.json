@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "com.unity.barracuda": {
+      "version": "3.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.burst": "1.6.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.burst": {
       "version": "1.6.6",
       "depth": 1,
@@ -10,7 +21,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "1.17.2",
+      "version": "1.17.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -38,16 +49,16 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.ide.visualstudio": "2.0.16",
-        "com.unity.ide.rider": "3.0.15",
+        "com.unity.ide.rider": "3.0.16",
         "com.unity.ide.vscode": "1.2.5",
         "com.unity.editorcoroutines": "1.0.0",
         "com.unity.performance.profile-analyzer": "1.1.1",
         "com.unity.test-framework": "1.1.31",
-        "com.unity.testtools.codecoverage": "1.0.1"
+        "com.unity.testtools.codecoverage": "1.2.2"
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.15",
+      "version": "3.0.16",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -72,7 +83,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.4.2",
+      "version": "1.4.4",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -102,7 +113,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
-      "version": "12.1.7",
+      "version": "12.1.8",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
@@ -112,7 +123,7 @@
       }
     },
     "com.unity.render-pipelines.high-definition": {
-      "version": "12.1.7",
+      "version": "12.1.8",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
@@ -122,18 +133,18 @@
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.modules.terrain": "1.0.0",
-        "com.unity.render-pipelines.core": "12.1.7",
-        "com.unity.shadergraph": "12.1.7",
-        "com.unity.visualeffectgraph": "12.1.7",
-        "com.unity.render-pipelines.high-definition-config": "12.1.7"
+        "com.unity.render-pipelines.core": "12.1.8",
+        "com.unity.shadergraph": "12.1.8",
+        "com.unity.visualeffectgraph": "12.1.8",
+        "com.unity.render-pipelines.high-definition-config": "12.1.8"
       }
     },
     "com.unity.render-pipelines.high-definition-config": {
-      "version": "12.1.7",
+      "version": "12.1.8",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "12.1.7"
+        "com.unity.render-pipelines.core": "12.1.8"
       }
     },
     "com.unity.searcher": {
@@ -144,7 +155,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
-      "version": "1.4.2",
+      "version": "1.6.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -162,11 +173,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "12.1.7",
+      "version": "12.1.8",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "12.1.7",
+        "com.unity.render-pipelines.core": "12.1.8",
         "com.unity.searcher": "4.9.1"
       }
     },
@@ -182,7 +193,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.testtools.codecoverage": {
-      "version": "1.0.1",
+      "version": "1.2.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -222,12 +233,12 @@
       }
     },
     "com.unity.visualeffectgraph": {
-      "version": "12.1.7",
+      "version": "12.1.8",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.shadergraph": "12.1.7",
-        "com.unity.render-pipelines.core": "12.1.7"
+        "com.unity.shadergraph": "12.1.8",
+        "com.unity.render-pipelines.core": "12.1.8"
       }
     },
     "com.unity.visualscripting": {
@@ -286,11 +297,21 @@
       }
     },
     "jp.keijiro.kino.aqua": {
-      "version": "1.0.3",
+      "version": "2.1.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "12.1.0"
+      },
+      "url": "https://registry.npmjs.com"
+    },
+    "jp.keijiro.kino.aqua.high-definition": {
+      "version": "2.1.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.render-pipelines.high-definition": "7.4.1"
+        "com.unity.render-pipelines.high-definition": "12.1.0",
+        "jp.keijiro.kino.aqua": "2.1.0"
       },
       "url": "https://registry.npmjs.com"
     },
@@ -380,8 +401,15 @@
       "dependencies": {},
       "url": "https://registry.npmjs.com"
     },
+    "jp.supertask.cinema-paint.high-definition": {
+      "version": "1.2.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
+    },
     "jp.supertask.shaderlibcore": {
-      "version": "1.0.3",
+      "version": "1.0.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {},

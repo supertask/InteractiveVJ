@@ -30,7 +30,9 @@ namespace InteractiveVJ {
         {
             mainWindow =  UI.Window(
                 "Real Mapping Sim",
+                UI.WindowLauncher<EffectSetting>("Effect setting"),
                 UI.WindowLauncher<CameraSetting>("Camera setting"),
+                UI.WindowLauncher<KinectPrefsSetting>("Kinect setting"),
                 //UI.WindowLauncher<SceneSetting>("Scene setting"),
                 UI.WindowLauncher(UI.Window(nameof(PrefsSearch), PrefsSearch.CreateElement())),
                 UI.Space().SetHeight(15f),

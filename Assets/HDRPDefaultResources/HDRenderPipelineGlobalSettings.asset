@@ -64,7 +64,11 @@ MonoBehaviour:
   beforeTransparentCustomPostProcesses: []
   beforePostProcessCustomPostProcesses: []
   afterPostProcessBlursCustomPostProcesses: []
-  afterPostProcessCustomPostProcesses: []
+  afterPostProcessCustomPostProcesses:
+  - CinemaPaint.PostProcessing.WaterColor, CinemaPaint.HighDefinition, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  - Kino.PostProcessing.Aqua, Kino.PostProcessing.Aqua.Runtime, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   beforeTAACustomPostProcesses: []
   lightLayerName0: Light Layer default
   lightLayerName1: Light Layer 1
