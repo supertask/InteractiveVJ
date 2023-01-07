@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+using Klak.Spout;
+using Klak.Motion;
+using Unity.Mathematics;
 using PrefsGUI;
 using PrefsGUI.RosettaUI;
 using RosettaUI;
-using UnityEngine;
-using UnityEngine.UIElements;
-// ReSharper disable ConditionIsAlwaysTrueOrFalse
-// ReSharper disable ConvertToConstant.Local
-using Klak.Spout;
 
 namespace InteractiveVJ
 {
@@ -15,9 +16,12 @@ namespace InteractiveVJ
     {
         [SerializeField] public SpoutSender spoutSender;
         [SerializeField] public Camera captureCamera; 
+        [SerializeField] public BrownianMotion brownianPivot; 
 
-        private PrefsString cameraSpoutName = new("Camera Spout Name", "UnityInteractiveVJ");
-        private PrefsFloat cameraPositionZ = new("Camera Position Z", -2.0f);
+        public PrefsString cameraSpoutName = new("Camera Spout Name", "UnityInteractiveVJ");
+        public PrefsFloat cameraPositionZ = new("Camera Position Z", -1.25f);
+        public PrefsVector3 brownianPosition = new("Brownian position", new Vector3(0.1f, 0.1f, 0.25f));
+        public PrefsVector3 brownianRotation = new("Brownian rotation", new Vector3(30f, 100f, 15f));
 
 
 
@@ -25,6 +29,8 @@ namespace InteractiveVJ
         {
             spoutSender.spoutName = cameraSpoutName.Get();
             captureCamera.gameObject.transform.localPosition = new Vector3(0f, 0f, cameraPositionZ);
+            brownianPivot.positionAmount = new float3(brownianPosition.Get().x, brownianPosition.Get().y, brownianPosition.Get().z);
+            brownianPivot.rotationAmount = new float3(brownianRotation.Get().x, brownianRotation.Get().y, brownianRotation.Get().z);
         }
 
         void Update()
@@ -41,6 +47,16 @@ namespace InteractiveVJ
                 cameraPositionZ.CreateElement().RegisterValueChangeCallback(() =>
                 {
                     captureCamera.gameObject.transform.localPosition = new Vector3(0f, 0f, cameraPositionZ.Get());
+                }),
+                brownianPosition.CreateElement().RegisterValueChangeCallback(() =>
+                {
+                    var position = brownianPosition.Get();
+                    brownianPivot.positionAmount = new float3(position.x, position.y, position.z);
+                }),
+                brownianRotation.CreateElement().RegisterValueChangeCallback(() =>
+                {
+                    var rotation = brownianRotation.Get();
+                    brownianPivot.rotationAmount = new float3(rotation.x, rotation.y, rotation.z);
                 })
             );
         }

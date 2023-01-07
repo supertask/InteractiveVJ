@@ -12,7 +12,7 @@ using Lasp;
 namespace InteractiveVJ
 {
 
-    public class EffectSetting : MonoBehaviour, IElementCreator
+    public class MeshEffectSetting : MonoBehaviour, IElementCreator
     {
         [SerializeField] public Material scannedMeshMaterial; 
         [SerializeField] public AudioLevelTracker audioHighPass; 
@@ -28,23 +28,28 @@ namespace InteractiveVJ
             AUDIO_LOW,
         }
 
-        private PrefsParam<EffectInputType> twistInputType = new ("Twist Input Type", EffectInputType.AUDIO_MID);
-        private PrefsFloat twistPercent = new ("Twist Percent", 0f);
-        private PrefsFloat twistTimeScale = new ("Twist Time Scale", 8f);
-        private PrefsFloat twistWaveAmplitude = new ("Twist Wave Amplitude", 3.5f);
-        private PrefsFloat twistRadius = new ("Twist Radius", 0.5f);
+        public PrefsParam<EffectInputType> twistInputType = new ("Twist Input Type", EffectInputType.AUDIO_MID);
+        public PrefsFloat twistPercent = new ("Twist Percent", 0f);
+        public PrefsFloat twistTimeScale = new ("Twist Time Scale", 8f);
+        public PrefsFloat twistWaveAmplitude = new ("Twist Wave Amplitude", 3.5f);
+        public PrefsFloat twistRadius = new ("Twist Radius", 0.5f);
 
-        private PrefsParam<EffectInputType> distortion3DInputType = new ("Distortion 3D Input Type", EffectInputType.AUDIO_MID);
-        private PrefsFloat distortion3DStrength = new ("Distortion 3D Strength", 0f);
-        private PrefsFloat distortion3DTimeScale = new ("Distortion 3D Time Scale", 6f);
-        private PrefsVector3 distortion3DUsage3D = new ("Distortion 3D Usage 3D", new Vector3(1f, 1f, 1f));
+        public PrefsParam<EffectInputType> distortion3DInputType = new ("Distortion 3D Input Type", EffectInputType.AUDIO_MID);
+        public PrefsFloat distortion3DStrength = new ("Distortion 3D Strength", 0f);
+        public PrefsFloat distortion3DTimeScale = new ("Distortion 3D Time Scale", 6f);
+        public PrefsVector3 distortion3DUsage3D = new ("Distortion 3D Usage 3D", new Vector3(1f, 1f, 1f));
+        
+        public PrefsFloat midiTwistPercent = new ("MIDI Twist Percent", 0f);
+        public PrefsFloat midiTwistRotatePower = new ("MIDI Twist Rotate Power", 0.5f);
+        public PrefsFloat midiTwistTimeScale = new ("MIDI Twist Y Time Scale", 0.3f);
+        public PrefsFloat midiTwistWaveFrequence = new ("MIDI Twist Wave Frequence", 0.1f);
 
         private EffectInputType currTwistInputType;
         private EffectInputType currDistortion3DInputType;
 
         void Start()
         {
-           // spoutSender.spoutName = cameraSpoutName.Get();
+            scannedMeshMaterial.SetFloat("_MidiTwistPercent", 0f);
         }
 
         void Update()
@@ -75,9 +80,9 @@ namespace InteractiveVJ
             return UI.Page(
 
                 UI.Box(
-                     UI.Tabs(
-                         ("Twist",
-                             () => UI.Column(
+                    UI.Tabs(
+                        ("Twist",
+                            () => UI.Column(
                                 twistInputType.CreateElement().RegisterValueChangeCallback(() =>
                                 {
                                     EffectInputType inputType = twistInputType.Get();
@@ -92,16 +97,30 @@ namespace InteractiveVJ
                         ),
                         ("Distortion 3D",
                             () => UI.Column(
-                               distortion3DInputType.CreateElement().RegisterValueChangeCallback(() =>
-                               {
-                                   EffectInputType inputType = distortion3DInputType.Get();
-                                   if (inputType == EffectInputType.MIDI_BUTTON) {
-                                   }
-                               }),
-                               distortion3DStrength.CreateSlider(0f, 0.1f).RegisterValueChangeCallback(() => { scannedMeshMaterial.SetFloat("_Distortion3DStrength", distortion3DStrength.Get()); }),
-                               distortion3DTimeScale.CreateElement().RegisterValueChangeCallback(() => { scannedMeshMaterial.SetFloat("_Distortion3DTimeScale", distortion3DTimeScale.Get()); }),
-                               distortion3DUsage3D.CreateElement().RegisterValueChangeCallback(() => { scannedMeshMaterial.SetVector("_Distortion3DUsage3D", distortion3DUsage3D.Get()); })
-                           )
+                                distortion3DInputType.CreateElement().RegisterValueChangeCallback(() =>
+                                {
+                                    EffectInputType inputType = distortion3DInputType.Get();
+                                    if (inputType == EffectInputType.MIDI_BUTTON) {
+                                    }
+                                }),
+                                distortion3DStrength.CreateSlider(0f, 0.1f).RegisterValueChangeCallback(() => { scannedMeshMaterial.SetFloat("_Distortion3DStrength", distortion3DStrength.Get()); }),
+                                distortion3DTimeScale.CreateElement().RegisterValueChangeCallback(() => { scannedMeshMaterial.SetFloat("_Distortion3DTimeScale", distortion3DTimeScale.Get()); }),
+                                distortion3DUsage3D.CreateElement().RegisterValueChangeCallback(() => { scannedMeshMaterial.SetVector("_Distortion3DUsage3D", distortion3DUsage3D.Get()); })
+                            )
+                        ),
+                        ("MIDI Twist",
+                            () => UI.Column(
+                                //distortion3DInputType.CreateElement().RegisterValueChangeCallback(() =>
+                                //{
+                                //    EffectInputType inputType = distortion3DInputType.Get();
+                                //    if (inputType == EffectInputType.MIDI_BUTTON) {
+                                //    }
+                                //}),
+                                midiTwistPercent.CreateSlider(0f, 1.0f).RegisterValueChangeCallback(() => { scannedMeshMaterial.SetFloat("_MidiTwistPercent", midiTwistPercent.Get()); }),
+                                midiTwistRotatePower.CreateElement().RegisterValueChangeCallback(() => { scannedMeshMaterial.SetFloat("_MidiTwistRotatePower", midiTwistRotatePower.Get()); }),
+                                midiTwistTimeScale.CreateElement().RegisterValueChangeCallback(() => { scannedMeshMaterial.SetFloat("_MidiTwistTimeScale", midiTwistTimeScale.Get()); }),
+                                midiTwistWaveFrequence.CreateElement().RegisterValueChangeCallback(() => { scannedMeshMaterial.SetFloat("_MidiTwistWaveFrequence", midiTwistWaveFrequence.Get()); })
+                            )
                         )
                     )
                 )

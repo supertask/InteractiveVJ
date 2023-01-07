@@ -30,16 +30,18 @@ namespace InteractiveVJ {
         {
             mainWindow =  UI.Window(
                 "Real Mapping Sim",
-                UI.WindowLauncher<EffectSetting>("Effect setting"),
-                UI.WindowLauncher<CameraSetting>("Camera setting"),
-                UI.WindowLauncher<KinectPrefsSetting>("Kinect setting"),
+                UI.WindowLauncher<MeshEffectSetting>("Mesh Effect"),
+                UI.WindowLauncher<CameraSetting>("Camera"),
+                UI.WindowLauncher<AudioInputSetting>("Audio input"),
+                UI.WindowLauncher<KinectPrefsSetting>("Azure Kinect"),
+                UI.WindowLauncher<VFXSetting>("VFX"),
                 //UI.WindowLauncher<SceneSetting>("Scene setting"),
                 UI.WindowLauncher(UI.Window(nameof(PrefsSearch), PrefsSearch.CreateElement())),
                 UI.Space().SetHeight(15f),
                 UI.Label(() => $"file path: {PrefsGUI.Kvs.PrefsKvsPathSelector.path}"),
                 UI.Button(nameof(Prefs.Save), Prefs.Save),
                 UI.Button(nameof(Prefs.DeleteAll), Prefs.DeleteAll)
-            ).SetPosition(windowPosition);
+            ).SetPosition(windowPosition).SetWidth(350f);
 
         }
     }

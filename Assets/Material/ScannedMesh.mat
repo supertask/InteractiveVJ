@@ -238,10 +238,10 @@ Material:
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
     - _Metallic: 0
-    - _MidiTwistPercent: 1
+    - _MidiTwistPercent: 0
     - _MidiTwistRotatePower: 0.5
     - _MidiTwistTimeScale: 0.3
-    - _MidiTwistWaveFrequence: 5
+    - _MidiTwistWaveFrequence: 0.1
     - _NoisePower: 0.01
     - _NormalMapSpace: 0
     - _NormalScale: 1
