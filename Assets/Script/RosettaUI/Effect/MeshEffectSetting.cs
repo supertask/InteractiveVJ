@@ -49,7 +49,19 @@ namespace InteractiveVJ
 
         void Start()
         {
-            scannedMeshMaterial.SetFloat("_MidiTwistPercent", 0f);
+            scannedMeshMaterial.SetFloat("_TwistPercent", twistPercent.Get());
+            scannedMeshMaterial.SetFloat("_TwistTimeScale", twistTimeScale.Get());
+            scannedMeshMaterial.SetFloat("_TwistWaveAmplitude", twistWaveAmplitude.Get());
+            scannedMeshMaterial.SetFloat("_TwistRadius", twistRadius.Get());
+
+            scannedMeshMaterial.SetFloat("_Distortion3DStrength", distortion3DStrength.Get());
+            scannedMeshMaterial.SetFloat("_Distortion3DTimeScale", distortion3DTimeScale.Get());
+            scannedMeshMaterial.SetVector("_Distortion3DUsage3D", distortion3DUsage3D.Get());
+            
+            scannedMeshMaterial.SetFloat("_MidiTwistPercent", midiTwistPercent.Get());
+            scannedMeshMaterial.SetFloat("_MidiTwistRotatePower", midiTwistRotatePower.Get());
+            scannedMeshMaterial.SetFloat("_MidiTwistTimeScale", midiTwistTimeScale.Get());
+            scannedMeshMaterial.SetFloat("_MidiTwistWaveFrequence", midiTwistWaveFrequence.Get());
         }
 
         void Update()
