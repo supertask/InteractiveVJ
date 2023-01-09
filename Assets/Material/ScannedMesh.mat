@@ -188,8 +188,8 @@ Material:
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
     - _Distortion3DNoiseScale: 0.4
-    - _Distortion3DStrength: 0.007270129
-    - _Distortion3DTimeScale: 7
+    - _Distortion3DStrength: 0.024211263
+    - _Distortion3DTimeScale: 1
     - _DistortionBlendMode: 0
     - _DistortionBlurBlendMode: 0
     - _DistortionBlurDstBlend: 0
@@ -238,7 +238,7 @@ Material:
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
     - _Metallic: 0
-    - _MidiTwistPercent: 0.338
+    - _MidiTwistPercent: 0.668
     - _MidiTwistRotatePower: 0.5
     - _MidiTwistTimeScale: 0.3
     - _MidiTwistWaveFrequence: 0.1
