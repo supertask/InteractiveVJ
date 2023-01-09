@@ -188,8 +188,8 @@ Material:
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
     - _Distortion3DNoiseScale: 0.4
-    - _Distortion3DStrength: 0
-    - _Distortion3DTimeScale: 10
+    - _Distortion3DStrength: 0.007270129
+    - _Distortion3DTimeScale: 7
     - _DistortionBlendMode: 0
     - _DistortionBlurBlendMode: 0
     - _DistortionBlurDstBlend: 0
@@ -238,7 +238,7 @@ Material:
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
     - _Metallic: 0
-    - _MidiTwistPercent: 0
+    - _MidiTwistPercent: 0.338
     - _MidiTwistRotatePower: 0.5
     - _MidiTwistTimeScale: 0.3
     - _MidiTwistWaveFrequence: 0.1
@@ -252,7 +252,8 @@ Material:
     - _PPDPrimitiveLength: 1
     - _PPDPrimitiveWidth: 1
     - _RainbowEffectColorFrequence: 15
-    - _RainbowEffectPower: 2
+    - _RainbowEffectPower: 10
+    - _RainbowRoughHeight: 0.005
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
@@ -298,7 +299,7 @@ Material:
     - _TwistRadius2: 0.5
     - _TwistTimeScale: 8
     - _TwistTimeScale2: 8
-    - _TwistWaveAmplitude: 2
+    - _TwistWaveAmplitude: 3.5
     - _TwistWaveAmplitude2: 2
     - _UVBase: 0
     - _UVDetail: 0
