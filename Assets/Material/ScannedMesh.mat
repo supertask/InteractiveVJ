@@ -188,7 +188,7 @@ Material:
     - _DisplacementLockTilingScale: 1
     - _DisplacementMode: 0
     - _Distortion3DNoiseScale: 0.4
-    - _Distortion3DStrength: 0.022129402
+    - _Distortion3DStrength: 0.017365284
     - _Distortion3DTimeScale: 1
     - _DistortionBlendMode: 0
     - _DistortionBlurBlendMode: 0

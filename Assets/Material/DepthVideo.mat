@@ -182,7 +182,7 @@ Material:
     - _CullMode: 0
     - _CullModeForward: 0
     - _Cutoff: 0.5
-    - _DepthDistance: 1
+    - _DepthDistance: 2
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
     - _DetailNormalScale: 1
@@ -238,6 +238,7 @@ Material:
     - _HeightTessAmplitude: 2
     - _HeightTessCenter: 0.5
     - _InvTilingScale: 1
+    - _Invert: 1
     - _Ior: 1.5
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
